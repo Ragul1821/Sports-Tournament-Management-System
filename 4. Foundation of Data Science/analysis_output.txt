@@ -1,0 +1,71 @@
+==========================================================================
+  SPORTS TOURNAMENT MANAGEMENT AND PERFORMANCE ANALYSIS SYSTEM
+  Foundation of Data Science - Database Retrieval & Statistical Analytics
+  Velalar College of Engineering and Technology, Erode-12 (Autonomous)
+  Department of Information Technology - 25IT3A & 25IT3B
+==========================================================================
+
+--------------------------------------------------------------------------
+  [STEP 1] RETRIEVING DATASET FROM DATABASE (sqlite3)
+--------------------------------------------------------------------------
+  [SUCCESS] Successfully connected to SQLite database: sports_tournament.db
+  - Retrieved 10 match records from view 'v_match_results'
+  - Retrieved 5 team standing records from view 'v_standings'
+  - Retrieved 10 active player scoring records
+
+--------------------------------------------------------------------------
+  [STEP 2] DATA PREPROCESSING & CLEANING
+--------------------------------------------------------------------------
+  - Cleaned & type-cast 10 match fixtures (Scores, Outcomes, Winners)
+  - Computed Goal Differentials & Point tallies for 5 teams
+  - Ranked 10 goal scorers across all college departments
+
+--------------------------------------------------------------------------
+  [STEP 3] DESCRIPTIVE STATISTICAL ANALYSIS
+--------------------------------------------------------------------------
+  Total Matches Analyzed:          10
+  Total Goals Scored:              35
+  Mean Goals per Match:            3.50
+  Median Goals per Match:          4.00
+  Mode (Most Frequent Goals):      4.00
+  Variance of Goals:               2.65
+  Standard Deviation:              1.63
+  Range of Goals:                  1 to 6 goals
+
+  Match Outcome Distribution:
+  - Home Team Wins:                4 (40.0%)
+  - Away Team Wins:                3 (30.0%)
+  - Drawn Fixtures:                3 (30.0%)
+
+  Official Tournament Points Standings:
+  Rank  | Team Name          | P   | W   | D   | L   | GF  | GA  | GD   | Pts 
+  ------+--------------------+-----+-----+-----+-----+-----+-----+------+-----
+  1     | MECH Titans        | 4   | 2   | 1   | 1   | 9   | 6   | +3   | 7   
+  2     | CSE Warriors       | 4   | 2   | 1   | 1   | 8   | 6   | +2   | 7   
+  3     | ECE Thunders       | 4   | 1   | 2   | 1   | 6   | 4   | +2   | 5   
+  4     | IT Strikers        | 4   | 1   | 1   | 2   | 7   | 10  | -3   | 4   
+  5     | CIVIL Spartans     | 4   | 1   | 1   | 2   | 5   | 9   | -4   | 4   
+
+  Top 5 Goal Scorers (Golden Boot):
+  Rank  | Player Name      | Team Name        | Department                   | Goals 
+  ------+------------------+------------------+------------------------------+-------
+  1     | Deepak M         | IT Strikers      | Information Technology       | 5     
+  2     | Arun Kumar       | CSE Warriors     | Computer Science & Engineering | 4     
+  3     | Karthik N        | MECH Titans      | Mechanical Engineering       | 4     
+  4     | Lokesh T         | MECH Titans      | Mechanical Engineering       | 3     
+  5     | Hari K           | ECE Thunders     | Electronics & Communication  | 2     
+
+--------------------------------------------------------------------------
+  [STEP 4] GENERATING DATA VISUALIZATIONS (Matplotlib)
+--------------------------------------------------------------------------
+  [x] Generated chart: visualizations/goals_per_match.png
+  [x] Generated chart: visualizations/points_distribution.png
+  [x] Generated chart: visualizations/top_scorers.png
+  [x] Verified Integrated 4-Subject Dashboard: Tournament_Dashboard.html
+
+==========================================================================
+  FOUNDATION OF DATA SCIENCE - ANALYSIS COMPLETED SUCCESSFULLY
+  - SQLite Database Retrieved: sports_tournament.db
+  - Visualizations Output in:  visualizations/
+  - Interactive Dashboard:     Tournament_Dashboard.html
+==========================================================================

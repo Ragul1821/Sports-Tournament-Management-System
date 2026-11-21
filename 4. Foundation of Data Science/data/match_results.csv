@@ -1,0 +1,11 @@
+match_id,tournament_name,team1,team2,team1_score,team2_score,match_time,status
+1,Inter-Dept Football Championship 2026,CSE Warriors,IT Strikers,3,1,2026-11-20 09:00:00,COMPLETED
+2,Inter-Dept Football Championship 2026,ECE Thunders,MECH Titans,2,2,2026-11-20 12:00:00,COMPLETED
+3,Inter-Dept Football Championship 2026,CSE Warriors,ECE Thunders,1,0,2026-11-20 15:00:00,COMPLETED
+4,Inter-Dept Football Championship 2026,IT Strikers,CIVIL Spartans,4,2,2026-11-21 09:00:00,COMPLETED
+5,Inter-Dept Football Championship 2026,MECH Titans,CIVIL Spartans,0,1,2026-11-21 12:00:00,COMPLETED
+6,Inter-Dept Football Championship 2026,CSE Warriors,MECH Titans,2,3,2026-11-21 15:00:00,COMPLETED
+7,Inter-Dept Football Championship 2026,IT Strikers,ECE Thunders,1,1,2026-11-22 09:00:00,COMPLETED
+8,Inter-Dept Football Championship 2026,ECE Thunders,CIVIL Spartans,3,0,2026-11-22 12:00:00,COMPLETED
+9,Inter-Dept Football Championship 2026,CSE Warriors,CIVIL Spartans,2,2,2026-11-22 15:00:00,COMPLETED
+10,Inter-Dept Football Championship 2026,IT Strikers,MECH Titans,1,4,2026-11-23 09:00:00,COMPLETED

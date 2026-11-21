@@ -1,0 +1,224 @@
+==========================================================================
+  SPORTS TOURNAMENT MANAGEMENT SYSTEM
+  DATABASE MANAGEMENT SYSTEM - SQL EXECUTION REPORT
+  Velalar College of Engineering and Technology, Erode-12
+  Department of Information Technology
+==========================================================================
+
+  [INFO] Initialized fresh database.
+  [INFO] Database created: sports_tournament.db
+
+==========================================================================
+  PHASE 1: CREATING DATABASE SCHEMA (DDL)
+==========================================================================
+  Tables Created Successfully:
+     1. Department
+     2. MatchSchedule
+     3. Player
+     4. PlayerMatchStat
+     5. ScoringRule
+     6. Sport
+     7. Team
+     8. TeamRegistration
+     9. Tournament
+
+  SQL Views Created Successfully:
+     1. v_match_results
+     2. v_standings
+
+==========================================================================
+  PHASE 2: LOADING SAMPLE DATA (DML)
+==========================================================================
+  Inserted Records Summary:
+  +-----------------------+--------------------+
+  | Table Name            | Record Count       |
+  +-----------------------+--------------------+
+  | Department            | 5                  |
+  | MatchSchedule         | 10                 |
+  | Player                | 15                 |
+  | PlayerMatchStat       | 19                 |
+  | ScoringRule           | 3                  |
+  | Sport                 | 3                  |
+  | Team                  | 5                  |
+  | TeamRegistration      | 5                  |
+  | Tournament            | 1                  |
+  +-----------------------+--------------------+
+
+==========================================================================
+  PHASE 3: EXECUTING SQL QUERIES (10 QUERIES)
+==========================================================================
+
+--------------------------------------------------------------------------
+  QUERY 1: Participating Teams, Departments & Sports
+  Purpose: INNER JOIN linking Team, Department, and Sport entities
+--------------------------------------------------------------------------
+  +---------+----------------+--------------------------------+----------+
+  | Team ID | Team Name      | Department                     | Sport    |
+  +---------+----------------+--------------------------------+----------+
+  | 1       | CSE Warriors   | Computer Science & Engineering | Football |
+  | 2       | IT Strikers    | Information Technology         | Football |
+  | 3       | ECE Thunders   | Electronics & Communication    | Football |
+  | 4       | MECH Titans    | Mechanical Engineering         | Football |
+  | 5       | CIVIL Spartans | Civil Engineering              | Football |
+  +---------+----------------+--------------------------------+----------+
+  Total records: 5
+
+--------------------------------------------------------------------------
+  QUERY 2: Player Registration Details & Team Roster
+  Purpose: Multi-table JOIN displaying student player details and their teams
+--------------------------------------------------------------------------
+  +-----------+-------------+----------+----------------+--------------------------------+
+  | Player ID | Player Name | Jersey # | Team Name      | Department                     |
+  +-----------+-------------+----------+----------------+--------------------------------+
+  | 1         | Arun Kumar  | 10       | CSE Warriors   | Computer Science & Engineering |
+  | 2         | Bharath S   | 7        | CSE Warriors   | Computer Science & Engineering |
+  | 3         | Chandru R   | 9        | CSE Warriors   | Computer Science & Engineering |
+  | 4         | Deepak M    | 11       | IT Strikers    | Information Technology         |
+  | 5         | Ezhil V     | 8        | IT Strikers    | Information Technology         |
+  | 6         | Ganesh P    | 5        | IT Strikers    | Information Technology         |
+  | 7         | Hari K      | 12       | ECE Thunders   | Electronics & Communication    |
+  | 8         | Inba S      | 3        | ECE Thunders   | Electronics & Communication    |
+  | 9         | Jagan R     | 6        | ECE Thunders   | Electronics & Communication    |
+  | 10        | Karthik N   | 1        | MECH Titans    | Mechanical Engineering         |
+  | 11        | Lokesh T    | 4        | MECH Titans    | Mechanical Engineering         |
+  | 12        | Mani V      | 2        | MECH Titans    | Mechanical Engineering         |
+  | 13        | Naveen S    | 14       | CIVIL Spartans | Civil Engineering              |
+  | 14        | Oviya R     | 15       | CIVIL Spartans | Civil Engineering              |
+  | 15        | Priya K     | 13       | CIVIL Spartans | Civil Engineering              |
+  +-----------+-------------+----------+----------------+--------------------------------+
+  Total records: 15
+
+--------------------------------------------------------------------------
+  QUERY 3: Match Schedule & Results (from SQL View)
+  Purpose: Retrieves formatted match results with scores and computed winners from v_match_results
+--------------------------------------------------------------------------
+  +----------+--------------+----------------+---------+---------+----------------+---------------------+
+  | Match ID | Team 1       | Team 2         | Score 1 | Score 2 | Match Winner   | Date & Time         |
+  +----------+--------------+----------------+---------+---------+----------------+---------------------+
+  | 1        | CSE Warriors | IT Strikers    | 3       | 1       | CSE Warriors   | 2026-11-20 09:00:00 |
+  | 2        | ECE Thunders | MECH Titans    | 2       | 2       | DRAW           | 2026-11-20 12:00:00 |
+  | 3        | CSE Warriors | ECE Thunders   | 1       | 0       | CSE Warriors   | 2026-11-20 15:00:00 |
+  | 4        | IT Strikers  | CIVIL Spartans | 4       | 2       | IT Strikers    | 2026-11-21 09:00:00 |
+  | 5        | MECH Titans  | CIVIL Spartans | 0       | 1       | CIVIL Spartans | 2026-11-21 12:00:00 |
+  | 6        | CSE Warriors | MECH Titans    | 2       | 3       | MECH Titans    | 2026-11-21 15:00:00 |
+  | 7        | IT Strikers  | ECE Thunders   | 1       | 1       | DRAW           | 2026-11-22 09:00:00 |
+  | 8        | ECE Thunders | CIVIL Spartans | 3       | 0       | ECE Thunders   | 2026-11-22 12:00:00 |
+  | 9        | CSE Warriors | CIVIL Spartans | 2       | 2       | DRAW           | 2026-11-22 15:00:00 |
+  | 10       | IT Strikers  | MECH Titans    | 1       | 4       | MECH Titans    | 2026-11-23 09:00:00 |
+  +----------+--------------+----------------+---------+---------+----------------+---------------------+
+  Total records: 10
+
+--------------------------------------------------------------------------
+  QUERY 4: Tournament Standings & Points Table
+  Purpose: Calculates points (Win=3, Draw=1, Loss=0) and ranks teams using SQL view & aggregation
+--------------------------------------------------------------------------
+  +----------------+---------+-----+------+------+-----------+---------------+-----------+--------+
+  | Team Name      | Matches | Won | Draw | Lost | Goals For | Goals Against | Goal Diff | Points |
+  +----------------+---------+-----+------+------+-----------+---------------+-----------+--------+
+  | MECH Titans    | 4       | 2   | 1    | 1    | 9         | 6             | 3         | 7      |
+  | CSE Warriors   | 4       | 2   | 1    | 1    | 8         | 6             | 2         | 7      |
+  | ECE Thunders   | 4       | 1   | 2    | 1    | 6         | 4             | 2         | 5      |
+  | IT Strikers    | 4       | 1   | 1    | 2    | 7         | 10            | -3        | 4      |
+  | CIVIL Spartans | 4       | 1   | 1    | 2    | 5         | 9             | -4        | 4      |
+  +----------------+---------+-----+------+------+-----------+---------------+-----------+--------+
+  Total records: 5
+
+--------------------------------------------------------------------------
+  QUERY 5: Top Goal Scorers Leaderboard
+  Purpose: GROUP BY player with HAVING clause filtering active scorers
+--------------------------------------------------------------------------
+  +-------------+----------------+-------------+---------+
+  | Player Name | Team Name      | Total Goals | Matches |
+  +-------------+----------------+-------------+---------+
+  | Deepak M    | IT Strikers    | 5           | 3       |
+  | Arun Kumar  | CSE Warriors   | 4           | 3       |
+  | Karthik N   | MECH Titans    | 4           | 2       |
+  | Lokesh T    | MECH Titans    | 3           | 2       |
+  | Hari K      | ECE Thunders   | 2           | 2       |
+  | Bharath S   | CSE Warriors   | 1           | 1       |
+  | Ezhil V     | IT Strikers    | 1           | 2       |
+  | Inba S      | ECE Thunders   | 1           | 1       |
+  | Naveen S    | CIVIL Spartans | 1           | 1       |
+  | Oviya R     | CIVIL Spartans | 1           | 1       |
+  +-------------+----------------+-------------+---------+
+  Total records: 10
+
+--------------------------------------------------------------------------
+  QUERY 6: Team(s) with Highest Wins
+  Purpose: Nested SUBQUERY finding team(s) matching maximum win count
+--------------------------------------------------------------------------
+  +--------------+-----+-----------+
+  | Team Name    | Won | Goals For |
+  +--------------+-----+-----------+
+  | CSE Warriors | 2   | 8         |
+  | MECH Titans  | 2   | 9         |
+  +--------------+-----+-----------+
+  Total records: 2
+
+--------------------------------------------------------------------------
+  QUERY 7: Tournament Match Scoring Summary Statistics
+  Purpose: Aggregate functions COUNT, SUM, AVG, MAX, MIN over all completed matches
+--------------------------------------------------------------------------
+  +---------------+-------------+-----------------+-----------------+-----------------+
+  | Total Matches | Total Goals | Avg Goals/Match | Max Match Goals | Min Match Goals |
+  +---------------+-------------+-----------------+-----------------+-----------------+
+  | 10            | 35          | 3.5             | 6               | 1               |
+  +---------------+-------------+-----------------+-----------------+-----------------+
+  Total records: 1
+
+--------------------------------------------------------------------------
+  QUERY 8: Match Outcome Distribution
+  Purpose: Conditional CASE statement categorized into Home Win, Away Win, and Draw
+--------------------------------------------------------------------------
+  +---------------+-----------+
+  | Match Outcome | Frequency |
+  +---------------+-----------+
+  | Away Team Win | 3         |
+  | Drawn Match   | 3         |
+  | Home Team Win | 4         |
+  +---------------+-----------+
+  Total records: 3
+
+--------------------------------------------------------------------------
+  QUERY 9: Registered Players Awaiting First Match
+  Purpose: LEFT OUTER JOIN with IS NULL filter identifying unused substitute players
+--------------------------------------------------------------------------
+  +-----------+-------------+----------------+
+  | Player ID | Player Name | Team Name      |
+  +-----------+-------------+----------------+
+  | 6         | Ganesh P    | IT Strikers    |
+  | 9         | Jagan R     | ECE Thunders   |
+  | 12        | Mani V      | MECH Titans    |
+  | 15        | Priya K     | CIVIL Spartans |
+  +-----------+-------------+----------------+
+  Total records: 4
+
+--------------------------------------------------------------------------
+  QUERY 10: Department-wise Total Goals Scored
+  Purpose: Nested JOIN and GROUP BY aggregating total tournament goals by academic department
+--------------------------------------------------------------------------
+  +--------------------------------+----------------+-------------+
+  | Department                     | Team Name      | Total Goals |
+  +--------------------------------+----------------+-------------+
+  | Mechanical Engineering         | MECH Titans    | 7           |
+  | Information Technology         | IT Strikers    | 6           |
+  | Computer Science & Engineering | CSE Warriors   | 5           |
+  | Electronics & Communication    | ECE Thunders   | 3           |
+  | Civil Engineering              | CIVIL Spartans | 2           |
+  +--------------------------------+----------------+-------------+
+  Total records: 5
+
+==========================================================================
+  PHASE 4: EXPORTING CLEAN CSV DATASETS
+==========================================================================
+  [x] Exported 10 match records  -> 4. Foundation of Data Science/data/match_results.csv
+  [x] Exported 5 standing records -> 4. Foundation of Data Science/data/standings.csv
+  [x] Exported 15 player records   -> 4. Foundation of Data Science/data/player_stats.csv
+  [x] Exported 5 team records     -> 4. Foundation of Data Science/data/teams.csv
+
+==========================================================================
+  DATABASE EXECUTION COMPLETED SUCCESSFULLY
+==========================================================================
+  Database file created: sports_tournament.db
+  All 10 queries executed with structured human-readable tables.
+==========================================================================

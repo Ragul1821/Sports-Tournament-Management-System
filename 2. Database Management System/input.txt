@@ -1,0 +1,29 @@
+-- ============================================================
+-- SAMPLE SQL INPUT COMMANDS FOR SPORTS TOURNAMENT DATABASE
+-- Velalar College of Engineering and Technology, Erode-12
+-- ============================================================
+
+-- 1. View all participating teams and their departments
+SELECT t.team_id, t.team_name, d.dept_name, s.sport_name
+FROM Team t
+JOIN Department d ON t.dept_id = d.dept_id
+JOIN Sport s ON t.sport_id = s.sport_id
+ORDER BY t.team_id;
+
+-- 2. View official tournament standings
+SELECT team_name, matches_played, wins, draws, losses, 
+       goals_for, goals_against, (goals_for - goals_against) AS goal_diff,
+       (wins * 3 + draws) AS total_points
+FROM v_standings
+WHERE tournament_id = 1
+ORDER BY total_points DESC, goal_diff DESC;
+
+-- 3. Top goal scorers (Golden Boot)
+SELECT p.player_name, t.team_name, SUM(ps.points_scored) AS total_goals
+FROM PlayerMatchStat ps
+JOIN Player p ON ps.player_id = p.player_id
+JOIN Team t ON p.team_id = t.team_id
+WHERE ps.played = 1
+GROUP BY p.player_id, p.player_name, t.team_name
+HAVING total_goals > 0
+ORDER BY total_goals DESC;

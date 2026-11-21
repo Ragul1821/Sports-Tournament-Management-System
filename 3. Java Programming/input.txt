@@ -1,0 +1,75 @@
+# ============================================================
+# SAMPLE INPUT FILE FOR JAVA MANAGEMENT MODULES
+# Sports Tournament Management and Team Performance Analysis
+# Velalar College of Engineering and Technology, Erode-12
+# ============================================================
+
+# ------------------------------------------------------------
+# SAMPLE 1: TeamManagement Input Stream
+# Sequence:
+# 2 -> View All Teams
+# 1 -> Add Team (ID: 6, Name: AIDS Hawks, Dept: 1, Sport: 2)
+# 3 -> Search Team (ID: 6)
+# 4 -> Update Team (ID: 6, Name: AIDS Super Hawks)
+# 5 -> Delete Team (ID: 6)
+# 6 -> Exit
+# ------------------------------------------------------------
+2
+1
+6
+AIDS Hawks
+1
+2
+3
+6
+4
+6
+AIDS Super Hawks
+5
+6
+6
+
+# ------------------------------------------------------------
+# SAMPLE 2: PlayerManagement Input Stream
+# Sequence:
+# 2 -> View All Players
+# 1 -> Register Player (ID: 16, Name: Suresh Raina, Team: 1, Jersey: 18)
+# 3 -> Search Player (ID: 16)
+# 4 -> View Participation
+# 5 -> Exit
+# ------------------------------------------------------------
+2
+1
+16
+Suresh Raina
+1
+18
+3
+16
+4
+5
+
+# ------------------------------------------------------------
+# SAMPLE 3: TournamentManagement Input Stream
+# Sequence:
+# 2 -> View Match Schedule
+# 4 -> Display Points Table
+# 1 -> Schedule Match (Tournament: 1, Team A: 1, Team B: 2, Date: 2026-11-25 15:30)
+# 3 -> Record Match Result (Match ID: 1, Score A: 3, Score B: 1)
+# 5 -> Generate Tournament Report (Tournament ID: 1)
+# 6 -> Exit
+# ------------------------------------------------------------
+2
+4
+1
+1
+1
+2
+2026-11-25 15:30
+3
+1
+3
+1
+5
+1
+6

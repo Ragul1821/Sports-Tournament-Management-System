@@ -1,0 +1,149 @@
+============================================================
+  SPORTS TOURNAMENT MANAGEMENT & PERFORMANCE ANALYSIS SYSTEM
+  Velalar College of Engineering and Technology, Erode
+============================================================
+
+>>> [1] SETTING UP DEPARTMENTS...
+    5 departments added successfully.
+
+>>> [2] SETTING UP SPORTS AND SCORING RULES...
+    3 sports with scoring rules added.
+
+>>> [3] CREATING TEAMS...
+    5 football teams created.
+
+>>> [4] REGISTERING PLAYERS...
+    15 players registered across 5 teams.
+
+>>> [5] CREATING TOURNAMENT...
+    Tournament: Inter-Dept Football Championship 2026
+    Start Date: 2026-11-20
+
+>>> [6] REGISTERING TEAMS FOR TOURNAMENT...
+    Team 1 registered successfully.
+    Team 2 registered successfully.
+    Team 3 registered successfully.
+    Team 4 registered successfully.
+    Team 5 registered successfully.
+    CAUGHT EXCEPTION: Team already registered for this tournament.
+
+>>> [7] SCHEDULING MATCHES...
+    Match 1 scheduled: Team 1 vs Team 2 at 2026-11-20 09:00
+    Match 2 scheduled: Team 3 vs Team 4 at 2026-11-20 12:00
+    Match 3 scheduled: Team 1 vs Team 3 at 2026-11-20 15:00
+    Match 4 scheduled: Team 2 vs Team 5 at 2026-11-20 18:00
+    Match 5 scheduled: Team 4 vs Team 5 at 2026-11-20 21:00
+    Match 6 scheduled: Team 1 vs Team 4 at 2026-11-21 00:00
+    Match 7 scheduled: Team 2 vs Team 3 at 2026-11-21 03:00
+    Match 8 scheduled: Team 3 vs Team 5 at 2026-11-21 06:00
+    Match 9 scheduled: Team 1 vs Team 5 at 2026-11-21 09:00
+    Match 10 scheduled: Team 2 vs Team 4 at 2026-11-21 12:00
+    CAUGHT CONFLICT: Team already has a match at 2026-11-20T09:00
+
+>>> [8] RECORDING MATCH RESULTS...
+    Match 1 result recorded: 3 - 1
+    Match 2 result recorded: 2 - 2
+    Match 3 result recorded: 1 - 0
+    Match 4 result recorded: 4 - 2
+    Match 5 result recorded: 0 - 1
+    Match 6 result recorded: 2 - 3
+    Match 7 result recorded: 1 - 1
+    Match 8 result recorded: 3 - 0
+    Match 9 result recorded: 2 - 2
+    Match 10 result recorded: 1 - 4
+    CAUGHT: Match result already recorded.
+
+>>> [9] RECORDING PLAYER STATISTICS...
+    Player statistics recorded for key matches.
+
+>>> [10] GENERATING REPORTS...
+
+
+=====================================================================
+       TEAM DETAILS REPORT
+=====================================================================
+| ID   | Team Name                 | Dept     | Sport     | Players    |
+|------|---------------------------|----------|-----------|------------|
+| 1    | CSE Warriors              | Dept:1   | Sport:2   | Players:3  |
+| 2    | IT Strikers               | Dept:2   | Sport:2   | Players:3  |
+| 3    | ECE Thunders              | Dept:3   | Sport:2   | Players:3  |
+| 4    | MECH Titans               | Dept:4   | Sport:2   | Players:3  |
+| 5    | CIVIL Spartans            | Dept:5   | Sport:2   | Players:3  |
+
+
+========================================================
+       MATCH RESULTS REPORT
+       Tournament: Inter-Dept Football Championship 2026
+========================================================
+| Match | Teams           | Date/Time        | Score         | Status     |
+|-------|-----------------|------------------|---------------|------------|
+| M1   | T1   vs T2   | 2026-11-20 09:00 | Score: 3 - 1   | COMPLETED  |
+| M2   | T3   vs T4   | 2026-11-20 12:00 | Score: 2 - 2   | COMPLETED  |
+| M3   | T1   vs T3   | 2026-11-20 15:00 | Score: 1 - 0   | COMPLETED  |
+| M4   | T2   vs T5   | 2026-11-20 18:00 | Score: 4 - 2   | COMPLETED  |
+| M5   | T4   vs T5   | 2026-11-20 21:00 | Score: 0 - 1   | COMPLETED  |
+| M6   | T1   vs T4   | 2026-11-21 00:00 | Score: 2 - 3   | COMPLETED  |
+| M7   | T2   vs T3   | 2026-11-21 03:00 | Score: 1 - 1   | COMPLETED  |
+| M8   | T3   vs T5   | 2026-11-21 06:00 | Score: 3 - 0   | COMPLETED  |
+| M9   | T1   vs T5   | 2026-11-21 09:00 | Score: 2 - 2   | COMPLETED  |
+| M10  | T2   vs T4   | 2026-11-21 12:00 | Score: 1 - 4   | COMPLETED  |
+
+
+===================================================================================
+       TOURNAMENT STANDINGS
+       Inter-Dept Football Championship 2026
+===================================================================================
+| Team                      | MP |  W |  D |  L |  GF |  GA |  GD | PTS |
+|---------------------------|----|----|----|----|-----|-----|-----|-----|
+| MECH Titans               |  4 |  2 |  1 |  1 |   9 |   6 |  +3 |   7 |
+| CSE Warriors              |  4 |  2 |  1 |  1 |   8 |   6 |  +2 |   7 |
+| ECE Thunders              |  4 |  1 |  2 |  1 |   6 |   4 |  +2 |   5 |
+| IT Strikers               |  4 |  1 |  1 |  2 |   7 |  10 |  -3 |   4 |
+| CIVIL Spartans            |  4 |  1 |  1 |  2 |   5 |   9 |  -4 |   4 |
+
+
+========================================================================
+       PLAYER PARTICIPATION REPORT
+========================================================================
+| ID   | Name                 | Team   | Jersey   | Pts    | Matches   |
+|------|----------------------|--------|----------|--------|-----------|
+| 4    | Deepak M             | Team:2   | Jersey:11  | Pts:5    | Matches:3  |
+| 1    | Arun Kumar           | Team:1   | Jersey:10  | Pts:4    | Matches:3  |
+| 10   | Karthik N            | Team:4   | Jersey:1   | Pts:4    | Matches:2  |
+| 11   | Lokesh T             | Team:4   | Jersey:4   | Pts:3    | Matches:2  |
+| 7    | Hari K               | Team:3   | Jersey:12  | Pts:2    | Matches:2  |
+| 2    | Bharath S            | Team:1   | Jersey:7   | Pts:1    | Matches:1  |
+| 5    | Ezhil V              | Team:2   | Jersey:8   | Pts:1    | Matches:2  |
+| 8    | Inba S               | Team:3   | Jersey:3   | Pts:1    | Matches:1  |
+| 13   | Naveen S             | Team:5   | Jersey:14  | Pts:1    | Matches:1  |
+| 14   | Oviya R              | Team:5   | Jersey:15  | Pts:1    | Matches:1  |
+| 3    | Chandru R            | Team:1   | Jersey:9   | Pts:0    | Matches:1  |
+| 6    | Ganesh P             | Team:2   | Jersey:5   | Pts:0    | Matches:0  |
+| 9    | Jagan R              | Team:3   | Jersey:6   | Pts:0    | Matches:0  |
+| 12   | Mani V               | Team:4   | Jersey:2   | Pts:0    | Matches:0  |
+| 15   | Priya K              | Team:5   | Jersey:13  | Pts:0    | Matches:0  |
+
+--- Summary ---
+Total Players: 15
+Active Players (played >= 1 match): 11
+Total Points Scored: 23
+Average Points per Active Player: 2.09
+Top Scorer: Deepak M (5 pts)
+
+
+>>> [11] STREAM-BASED ANALYTICS...
+
+    Highest Scoring Match: Match 4 (Total: 6 goals)
+    Home Wins: 4 | Away Wins: 3 | Draws: 3
+    Average Goals per Match: 3.50
+
+    Teams grouped by Department:
+      Dept 1: CSE Warriors
+      Dept 2: IT Strikers
+      Dept 3: ECE Thunders
+      Dept 4: MECH Titans
+      Dept 5: CIVIL Spartans
+
+============================================================
+  PROGRAM EXECUTION COMPLETED SUCCESSFULLY
+============================================================

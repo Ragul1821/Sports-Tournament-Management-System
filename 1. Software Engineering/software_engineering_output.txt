@@ -1,0 +1,47 @@
+====================================================================== 
+  SUBJECT 1: SOFTWARE ENGINEERING DOCUMENTATION AND VERIFICATION 
+  Velalar College of Engineering and Technology, Erode 
+====================================================================== 
+ 
+[1] PROJECT SCOPE AND OBJECTIVES (SRS) 
+---------------------------------------------------------------------- 
+ - Project Title: Sports Tournament Management and Team Performance Analysis 
+ - Purpose: Inter-departmental tournament scheduling, scoring, and analysis 
+ - Architecture: 3-tier integration (Java Console UI, SQLite DBMS, Python Analytics) 
+ 
+[2] SOFTWARE ENGINEERING DIAGRAMS (diagrams/) 
+---------------------------------------------------------------------- 
+ [x] Architecture Diagram            - diagrams\Architecture_Diagram.png 
+ [x] Use Case Diagram                - diagrams\Use_Case_Diagram.png 
+ [x] Class Diagram                   - diagrams\Class_Diagram.png 
+ [x] Sequence Diagram                - diagrams\Sequence_Diagram.png 
+ [x] Activity Diagram                - diagrams\Activity_Diagram.png 
+ [x] DFD Level 0 (Context Diagram)   - diagrams\DFD_Level_0_Context_Diagram.png 
+ [x] DFD Level 1 (Data Flow)         - diagrams\DFD_Level_1.png 
+ 
+[3] SOFTWARE TESTING AND VERIFICATION SUMMARY (Testing_Document.md) 
+---------------------------------------------------------------------- 
+ Total Test Cases: 14 
+ Total Passed:     14 
+ Total Failed:      0 
+ Pass Rate:        100% 
+ 
+ Key Test Results: 
+  - TC-01: Add valid team (CSE Warriors, Dept=1, Sport=2)   : PASS 
+  - TC-02: Add team with invalid dept validation            : PASS 
+  - TC-04: Register valid player (Arun, Team=1, Jersey=10)   : PASS 
+  - TC-07: Register team for tournament                     : PASS 
+  - TC-08: Duplicate tournament registration check          : PASS (Exception Caught) 
+  - TC-11: Match scheduling with conflict detection         : PASS 
+  - TC-13: Same team schedule conflict check                : PASS (Conflict Caught) 
+ 
+[4] DOCUMENTATION ARTIFACTS IN FOLDER 
+---------------------------------------------------------------------- 
+ - SRS_Document.md         : Complete Software Requirements Specification 
+ - Testing_Document.md     : Test Plan, Test Cases, Traceability Matrix 
+ - TestPlan.md             : Test Execution Environment and Deliverables 
+ - DBMS_Documentation.md   : Relational Schema and Normalization details 
+ 
+====================================================================== 
+  SOFTWARE ENGINEERING VERIFICATION COMPLETED SUCCESSFULLY 
+====================================================================== 
